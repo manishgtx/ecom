@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { cartReducer } from "./slices/cartSlice";
-
+import { navReducer } from "./slices/navSlice";
+import { openSubmenu,closeSubmenu } from "./slices/navSlice";
 const store = configureStore({
     reducer: {
-        cart: cartReducer
+        cart: cartReducer,
+        nav: navReducer
     }
 })
 
-export default store;
+export {openSubmenu,closeSubmenu,store}

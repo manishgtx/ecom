@@ -1,3 +1,71 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+.links-container {
+    position: relative
+}
+.nav-link {
+    padding: 20px;
+    border-bottom: 4px solid transparent;
+}
+.nav-link:hover {
+    border-bottom: 4px solid #ee5f73;
+}
+.submenu-wrapper {
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 99;
+    display: none;
+}
+.submenu {
+    width: 1170px;
+    height: 460px;
+    position: sticky;
+    left: 160px;
+    background-color: #ffffff;
+    z-index: -1;
+    box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
+    padding: 16px 32px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.submenu-child-wrapper {
+    padding: 8px;
+}
+
+.show {
+    display: block;
+}
+
+.links {
+    
+}
+
+.items-title {
+    color: #ee5f73;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.items-para {
+    color: #282C3F;
+    cursor: pointer;
+    font-size: 14px;
+}
+.items-para:hover {
+    font-weight: 500;
+}
+.items-para:last-child {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eaeaec;
+}
